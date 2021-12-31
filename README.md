@@ -4,7 +4,7 @@
 노션으로 정리를 하면서 공부를 하지만 복습을 따로 하지않고 있어서
 공부할겸 만드는 퀴즈 어플리케이션 입니다.
 
-## link
+## 프로젝트 link
 https://frosty-kepler-c99ffd.netlify.app
 
 
