@@ -44,3 +44,21 @@ const button=$(".btn");
 
 //인덱스 초기화 -> 현재값
 var currentQuiz=0;
+
+loadQuiz();
+
+function loadQuiz() {
+    const currentData = quizArr[currentQuiz];
+    question.innerText=currentData.qusetion;
+    a.innerText=currentData.a;
+    console.log(a.innerText);
+    b.innerText=currentData.b;
+
+}
+
+button.addEventListener("click",()=>{
+    loadQuiz();
+    currentQuiz++;
+});
+
+
