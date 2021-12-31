@@ -2,9 +2,14 @@
 // -[x] 질문 객체로 관리하기
     // -[x] question , a,b,c,d , answer
 
-// -[] 제출 버튼 누르면 다음 문제로 넘어가게
+// -[x] DOM 가져오기
 
-const quiz = [
+// -[] 제출 버튼 누르면 다음 문제로 넘어가게
+    // -[] 퀴즈내용 , a,b,c,d 문제 바꾸기
+        // -[] 배열에 담아서 현재 데이터 담아주기
+        // -[] 1씩증가해서 다음 데이터 변환하게
+
+const quizArr = [
     {
         qusetion: "곰은 다리가 몇개일까요?",
         a:"1개",
@@ -27,3 +32,15 @@ const quiz = [
 
 
 ]
+
+
+const $=(s)=>document.querySelector(s);
+const a=$("#a-text");
+const b=$("#b-text");
+const c=$("#c-text");
+const d=$("#d-text");
+const question=$(".question");
+const button=$(".btn");
+
+//인덱스 초기화 -> 현재값
+var currentQuiz=0;
