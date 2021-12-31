@@ -1,0 +1,51 @@
+/*
+    TODO
+    // -[x] 가운데로 맞추기
+
+    // -[] 박스 생성
+
+ */
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background-color: #f4f4f4;
+    margin: 0;
+
+}
+.title{
+    margin-bottom: 50px;
+}
+.hint{
+    margin-bottom: 20px;
+}
+
+.check{
+    margin-bottom: 100px;
+}
+.quiz-submit{
+    margin-bottom: 50px;
+}
+
+
+
+.quiz-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgba(0,0,0,1);
+    width: 600px;
+    position: relative;
+    top: 200px;
+    left: 650px;
+    height: 50vh;
+
+}
+
+
