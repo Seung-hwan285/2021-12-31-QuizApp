@@ -15,7 +15,8 @@
 
 body{
     position: relative;
-    background-color: #f4f4f4;
+    background-color: #b8c6db;
+
     margin: 0;
 
 }
@@ -36,12 +37,14 @@ body{
 
 ul li{
     list-style-type: none;
-    padding: 5px;
+    padding: 10px;
+    margin-right: 50px;
 }
 
 
 
 .quiz-container{
+    background: white;
     position: absolute;
     left: 50%;
     margin-left: -290px;
@@ -52,10 +55,11 @@ ul li{
     flex-direction: column;
     border: 1px solid rgba(0,0,0,1);
     width: 600px;
-    height: 60vh;
+    height: 80vh;
     padding: 1rem;
     border-radius: 5px;
     box-shadow:  0 0 10px 5px rgba(0,0,0,0.1);
+    border: 0;
 
 }
 
@@ -64,9 +68,20 @@ label{
 }
 
 .btn{
+    position: absolute;
+    height: 5vh;
     background-color: blue;
     width: 100%;
     color: white;
     cursor: pointer;
     font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+    top: 20px;
+}
+
+.open{
+    text-decoration: none;
+    color: red;
+
 }
