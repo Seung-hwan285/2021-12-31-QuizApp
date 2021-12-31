@@ -9,7 +9,8 @@
         // -[x] 배열에 담아서 현재 데이터 담아주기
         // -[x] 1씩증가해서 다음 데이터 변환하게
     // -[] 정답 확인
-        // -[] 모든 answer radio태그 가져오기
+        // -[x] 모든 answer radio태그 가져오기
+        // -[x] 선택한 radio 값 가져오기
         // -[] 선택한 radio랑 quizArr에 있는 정답이랑 비교
 
 const quizArr = [
@@ -45,7 +46,6 @@ const d=$("#d-text");
 const question=$(".question");
 const button=$(".btn");
 
-const answer= document.querySelectorAll("answer");
 
 //인덱스 초기화 -> 현재값
 var currentQuiz=0;
@@ -62,17 +62,26 @@ function loadQuiz() {
 
 }
 
-function quizAnswer() {
+function getSelected() {
+    const answerList= document.querySelectorAll(".answer");
 
-    answer.forEach((item)=>{
-        console.log(item.value);
+    var answer=undefined;
+    answerList.forEach((item)=>{
+       if(item.checked){
+            answer=item.id;
+
+       }
     });
+    return answer;
 }
 
 
+
 button.addEventListener("click",()=>{
+
+    const answer=getSelected();
+    console.log(answer);
     loadQuiz();
-    quizAnswer();
     currentQuiz++;
 });
 
