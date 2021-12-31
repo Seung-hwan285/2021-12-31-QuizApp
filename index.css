@@ -46,7 +46,6 @@ ul li{
     left: 50%;
     margin-left: -290px;
     top: 100px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +56,11 @@ ul li{
     padding: 1rem;
     border-radius: 5px;
     box-shadow:  0 0 10px 5px rgba(0,0,0,0.1);
+
+}
+
+label{
+    cursor: pointer;
 }
 
 .btn{
