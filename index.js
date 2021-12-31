@@ -11,7 +11,7 @@
     // -[] 정답 확인
         // -[x] 모든 answer radio태그 가져오기
         // -[x] 선택한 radio 값 가져오기
-        // -[] 선택한 radio랑 quizArr에 있는 정답이랑 비교
+        // -[x] 선택한 radio랑 quizArr에 있는 정답이랑 비교
 
 const quizArr = [
     {
@@ -20,7 +20,7 @@ const quizArr = [
         b:"2개",
         c:"3개",
         d:"4개",
-        answer : "4개"
+        answer : "d"
     },
 
     {
@@ -30,8 +30,7 @@ const quizArr = [
         b:"호이스팅이란 값을 고정한다.",
         c:"호이스팅은 라우팅이다.",
         d:"자바스크립트 문법을 삭제한다",
-        answer:"자바스크립트 함수는 실행되기전에 함수 안에 필요한" +
-            "변수값들을 최상단에 선언한다."
+        answer: "a"
     }
 
 
@@ -65,7 +64,7 @@ function loadQuiz() {
 function getSelected() {
     const answerList= document.querySelectorAll(".answer");
 
-    var answer=undefined;
+    var answer;
     answerList.forEach((item)=>{
        if(item.checked){
             answer=item.id;
@@ -76,13 +75,25 @@ function getSelected() {
 }
 
 
+function answerCheck(){
+    const answerSelet=getSelected();
+
+    console.log(answerSelet);
+    console.log(quizArr[currentQuiz].answer);
+    if(answerSelet === quizArr[currentQuiz].answer){
+        ++currentQuiz;
+        loadQuiz();
+
+    }else{
+        alert("틀렸습니다");
+    }
+
+
+}
+
 
 button.addEventListener("click",()=>{
-
-    const answer=getSelected();
-    console.log(answer);
-    loadQuiz();
-    currentQuiz++;
+    answerCheck();
 });
 
 
