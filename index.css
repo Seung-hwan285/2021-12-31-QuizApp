@@ -2,10 +2,9 @@
     TODO
     // -[x] 가운데로 맞추기
 
-    // -[] 박스 생성
-        // -[] 제출 버튼 만들기
-        // -[] radio 띄우기
-        // -[]
+    // -[x] 박스 생성
+        // -[x] 제출 버튼 만들기
+        // -[x] radio 띄우기
 
  */
 
@@ -32,6 +31,12 @@ body{
 }
 .quiz-submit{
     margin-bottom: 50px;
+}
+
+
+ul li{
+    list-style-type: none;
+    padding: 5px;
 }
 
 
