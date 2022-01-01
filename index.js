@@ -13,14 +13,20 @@
         // -[x] 선택한 radio 값 가져오기
         // -[x] 선택한 radio랑 quizArr에 있는 정답이랑 비교
 
+    // -[] 힌트보기
+        // -[x] 모달창 생성
+        // -[x] 모달창 닫기
+        // -[] 다음 퀴즈로 넘어가면 모달창 닫기
+
+
 const quizArr = [
     {
-        qusetion: "곰은 다리가 몇개일까요?",
-        a:"1개",
-        b:"2개",
-        c:"3개",
-        d:"4개",
-        answer : "d"
+        qusetion: "자바스크립트,바닐라 자바스크립트 차이점은?",
+        a:"같다",
+        b:"바닐라 자바스크립트는 순수한 라이브러리없는 언어이다",
+        c:"자바스크립트는 순수한 라이브러없는 언어이다",
+        d:"모르겠다",
+        answer : "b"
     },
 
     {
@@ -31,8 +37,31 @@ const quizArr = [
         c:"호이스팅은 라우팅이다.",
         d:"자바스크립트 문법을 삭제한다",
         answer: "a"
-    }
+    },
 
+    {
+        qusetion:"로컬 스토리지란?",
+        a:"사용자가 임시적으로 또는 영구적으로 window.localStorage에 저장하는 곳",
+        b:"사용자가 임시적으로 저장하고 새로고침하면 없어짐",
+        c:"window.sessionStorage라는 곳에 저장",
+        d:"사용자 데이터를 삭제",
+
+        answer:"a"
+
+    }
+]
+
+const hintArr=[
+    {
+        content : "바닐라 자바스크립트는 원초적이다."
+    },
+
+    {
+        content : "최상단에 배치한다."
+    },
+    {
+        content:  "로컬스토리지는 저장소이다"
+    }
 
 ]
 
@@ -46,20 +75,46 @@ const question=$(".question");
 const button=$(".btn");
 const quiz=$("#quiz");
 
+
+const hint=$(".hint-open");
+const textHint=$("#text");
+
+
 //인덱스 초기화 -> 현재값
 var currentQuiz=0;
 
 loadQuiz();
 
+
 function loadQuiz() {
     const currentData = quizArr[currentQuiz];
+
+
     question.innerText=currentData.qusetion;
     a.innerText=currentData.a;
     b.innerText=currentData.b;
     c.innerText=currentData.c;
     d.innerText=currentData.d;
 
+
 }
+
+function hintOpen() {
+    const currentHint = hintArr[currentQuiz];
+    $('.model-wrap').style.display='block';
+    textHint.innerText=currentHint.content;
+}
+
+function hintClose(){
+
+    $('.model-wrap').style.display='none';
+}
+
+
+$('.hint-open').addEventListener("click",hintOpen);
+$('.hint-close').addEventListener("click",hintClose);
+
+
 
 function getSelected() {
     const answerList= document.querySelectorAll(".answer");

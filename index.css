@@ -6,6 +6,8 @@
         // -[x] 제출 버튼 만들기
         // -[x] radio 띄우기
 
+    // -[] 힌트 생성
+        // -[]
  */
 
 *{
@@ -77,7 +79,7 @@ label{
     font-size: 20px;
     border-radius: 5px;
     border: 0;
-    top: 20px;
+    top: 0px;
 }
 
 .open{
@@ -85,3 +87,38 @@ label{
     color: red;
 
 }
+.question{
+    font-size: 25px;
+}
+
+
+.hint-open{
+    border-radius: 5px;
+    border: 0px;
+    background: white;
+    cursor: pointer;
+}
+
+.model-wrap{
+
+    display: none;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,5);
+    background: #eee;
+    padding: 5px;
+
+
+
+}
+.text{
+    text-align: center;
+}
+
+.hint-close > img{
+    display: block;
+    width: 10%;
+    height: 100%;
+}
+
