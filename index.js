@@ -13,10 +13,10 @@
         // -[x] 선택한 radio 값 가져오기
         // -[x] 선택한 radio랑 quizArr에 있는 정답이랑 비교
 
-    // -[] 힌트보기
+    // -[x] 힌트보기
         // -[x] 모달창 생성
         // -[x] 모달창 닫기
-        // -[] 다음 퀴즈로 넘어가면 모달창 닫기
+        // -[x] 다음 퀴즈로 넘어가면 모달창 닫기
 
 
 const quizArr = [
@@ -95,7 +95,7 @@ function loadQuiz() {
     b.innerText=currentData.b;
     c.innerText=currentData.c;
     d.innerText=currentData.d;
-
+    hintClose();
 
 }
 
